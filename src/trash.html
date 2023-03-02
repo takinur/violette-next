@@ -127,3 +127,28 @@
   </div>
 </div>
 </div>
+
+
+//Product/details ~ 109-126 Line
+
+<div class="mobile-product-new-reviews" id="scrollReviewBlock">
+  <span class="review-header-information" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+      {{#if settings.show_product_rating}}
+          <meta itemprop="ratingValue" content="{{product.rating}}">
+          <meta itemprop="ratingCount" content="{{product.num_reviews}}">
+          {{> components/common/rating-stars rating=product.rating star_size="medium"}}
+          {{{snippet 'product_rating'}}}
+      {{/if}}
+
+      {{#if settings.show_product_reviews}}
+          <meta itemprop="reviewCount" content="{{product.num_reviews}}">
+          <span class="review-count">(
+              {{{product.num_reviews}}}
+          )</span>
+      {{/if}}
+  </span>
+</div>
+</div>
+
+
+//Product/details ~ 436 - 469 Line
