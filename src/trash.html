@@ -91,3 +91,39 @@
     </section>
   {{/if}}
 </div>
+
+//Product/Tabs ~ 301 Line
+<div id="collapseFourTablet" class="collapse" aria-labelledby="headingFourTablet">
+  <div class="card-body">
+      <div class="mobile-reviews-block">
+          <div>
+              <span class="review-header-information" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                  {{#if settings.show_product_rating}}
+                      <meta itemprop="ratingValue" content="{{product.rating}}">
+                      <meta itemprop="ratingCount" content="{{product.num_reviews}}">
+                      {{> components/common/rating-stars rating=product.rating star_size="medium"}}
+                      {{{snippet 'product_rating'}}}
+                  {{/if}}
+      
+                  {{#if settings.show_product_reviews}}
+                      <meta itemprop="reviewCount" content="{{product.num_reviews}}">
+                      <span class="review-count">
+                          {{#if settings.show_product_rating}}
+                              {{product.rating}}
+                          {{/if}}
+                          {{{lang 'product.reviews.total_based_on' numReviews=product.num_reviews}}}
+                      </span>
+      
+                      <a href="#modal-review-form" class="review-link">
+                          Write a review
+                      </a>
+                  {{/if}}
+              </span>
+          </div>
+          {{#each product.reviews.list}}
+              {{> components/reviews/review-item show-ratings=../settings.show_product_rating}}
+          {{/each}}
+      </div>
+  </div>
+</div>
+</div>
