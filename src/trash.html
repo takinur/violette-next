@@ -187,6 +187,27 @@
 </div>
 </div>
 
+//Product/product-column/purchase ~ 21-39 Line
+<span class="review-header-information" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+  {{#if settings.show_product_rating}}
+      <meta itemprop="ratingValue" content="{{product.rating}}">
+      <meta itemprop="ratingCount" content="{{product.num_reviews}}">
+      {{> components/common/rating-stars rating=product.rating star_size="medium"}}
+      {{{snippet 'product_rating'}}}
+  {{/if}}
+
+  {{#if settings.show_product_reviews}}
+      <meta itemprop="reviewCount" content="{{product.num_reviews}}">
+      <span class="review-count">(
+          {{{product.num_reviews}}}
+      )</span>
+      
+      <a href="#modal-review-form" class="review-link">
+          Write a review
+      </a>
+  {{/if}}
+</span>
+
 
 
 
