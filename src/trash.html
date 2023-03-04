@@ -218,8 +218,11 @@
 <img class="mobile-description-banner" src="https://Eccotemp360.azureedge.net/images/BigCommerceBanners/Banner_CA.gif" />
 
 
-//template/page/brand ~ 10 Line -- Brand Name 
+//template/page/brands ~ 10 Line -- Brand Name 
 
-// {{#withLast breadcrumbs}}
-{{this.url}}
-{{/withLast}} 
+//template/category 
+{{#withLast breadcrumbs}}
+{{#if this.url "==" "https://ca.eccotemp.com/builder-series-parts/"}}
+<h1 class="display:none;">Builder Series Parts </h1>
+{{/if}}
+{{/withLast}}
