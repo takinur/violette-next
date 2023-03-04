@@ -240,4 +240,25 @@
     
 </script>
 
-
+<script>
+  $(window).load(function(){
+  
+  function getQueryVariable(parameter) {
+      var searchString = window.location.search.substring(1);
+      var params = searchString.split('&');
+      for (var i = 0; i < params.length; i++) {
+      var pair = params[i].split('=');
+      if (decodeURIComponent(pair[0]) == parameter) {
+      return decodeURIComponent(pair[1]);
+      }
+      }
+  }
+  
+  var keyword = getQueryVariable('k');
+  
+  if(keyword) {
+  $(".productOptionViewRadio li label:contains("+keyword+")").find("input").attr('checked', true).trigger('change');
+  }
+  
+  });
+</script>
