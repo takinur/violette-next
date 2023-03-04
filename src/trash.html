@@ -218,7 +218,7 @@
 <img class="mobile-description-banner" src="https://Eccotemp360.azureedge.net/images/BigCommerceBanners/Banner_CA.gif" />
 
 
-//template/page/brands ~ 10 Line -- Brand Name 
+//template/page/brand ~ 10 Line -- Brand Name 
 
 //template/category 
 {{#withLast breadcrumbs}}
@@ -226,3 +226,18 @@
 <h1 class="display:none;">Builder Series Parts </h1>
 {{/if}}
 {{/withLast}}
+
+<script>
+        
+    
+  const queryString = window.location.search;
+  console.log('Query:', queryString);
+
+  //If the query string is not empty add No Index to the page
+  if (queryString !== '') {
+    $('head').append('<meta name="robots" content="noindex">');
+  }
+    
+</script>
+
+
