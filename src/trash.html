@@ -258,9 +258,8 @@ ERE: {{assignVar "requestUrl" (decodeURI settings.facebook_like_button.href) }}
  {{getVar "requestUrl"}}
 
 
-    / Works 
+  / Works 
  {{#contains (decodeURI settings.facebook_like_button.href)  "bc_fsnf"}}
- YES DUDE
- {{else}}
- Nope
+ <meta name="robots" content="noindex">
 {{/contains}}
+
