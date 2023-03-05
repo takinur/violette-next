@@ -270,23 +270,23 @@ ERE: {{assignVar "requestUrl" (decodeURI settings.facebook_like_button.href) }}
 
 // NO INdex on Specific Pages - CA
 {{#if (decodeURI settings.facebook_like_button.href) "=="  "https://ca.eccotemp.com/cookie-statement"}}
-<meta name="robots" content="noindex"> 
+<meta name="robots" content="noindex,nofollow"> 
 {{else if (decodeURI settings.facebook_like_button.href) "=="  "https://ca.eccotemp.com/privacy-policy/"}}
-<meta name="robots" content="noindex"> 
+<meta name="robots" content="noindex,nofollow"> 
 {{else if (decodeURI settings.facebook_like_button.href) "=="  "https://ca.eccotemp.com/shipping-returns/"}}
- <meta name="robots" content="noindex"> 
+ <meta name="robots" content="noindex,nofollow"> 
 {{else}}
 <!--ECCOTEMP-->
 {{/if}}
 // NO INdex on Specific Pages - EU
 {{#if (decodeURI settings.facebook_like_button.href) "=="  "https://eu.eccotemp.com/privacy-policy/"}}
-<meta name="robots" content="noindex"> 
+<meta name="robots" content="noindex,nofollow"> 
 {{else if (decodeURI settings.facebook_like_button.href) "=="  "https://eu.eccotemp.com/shipping-returns/"}}
-<meta name="robots" content="noindex"> 
+<meta name="robots" content="noindex,nofollow"> 
 {{else if (decodeURI settings.facebook_like_button.href) "=="  "https://eu.eccotemp.com/terms-and-conditions/"}}
- <meta name="robots" content="noindex"> 
+ <meta name="robots" content="noindex,nofollow"> 
 {{else if (decodeURI settings.facebook_like_button.href) "=="  "https://eu.eccotemp.com/right-of-withdrawal/"}}
- <meta name="robots" content="noindex"> 
+ <meta name="robots" content="noindex,nofollow"> 
 {{else}}
 <!--ECCOTEMP-->
 {{/if}}
