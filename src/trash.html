@@ -266,3 +266,15 @@ ERE: {{assignVar "requestUrl" (decodeURI settings.facebook_like_button.href) }}
 || More than 1 Heading on the page 
 // Component / product/ deatails 
 <h1 style="display:none;">{{product.title}}</h1> 
+
+
+// NO INdex on Specific Pages 
+{{#if (decodeURI settings.facebook_like_button.href) "=="  "https://ca.eccotemp.com/cookie-statement"}}
+<meta name="robots" content="noindex"> 
+{{else if (decodeURI settings.facebook_like_button.href) "=="  "https://ca.eccotemp.com/privacy-policy/"}}
+<meta name="robots" content="noindex"> 
+{{else if (decodeURI settings.facebook_like_button.href) "=="  "https://ca.eccotemp.com/shipping-returns/"}}
+ <meta name="robots" content="noindex"> 
+{{else}}
+<!--ECCOTEMP-->
+{{/if}}
