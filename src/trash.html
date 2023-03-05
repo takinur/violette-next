@@ -268,12 +268,24 @@ ERE: {{assignVar "requestUrl" (decodeURI settings.facebook_like_button.href) }}
 <h1 style="display:none;">{{product.title}}</h1> 
 
 
-// NO INdex on Specific Pages 
+// NO INdex on Specific Pages - CA
 {{#if (decodeURI settings.facebook_like_button.href) "=="  "https://ca.eccotemp.com/cookie-statement"}}
 <meta name="robots" content="noindex"> 
 {{else if (decodeURI settings.facebook_like_button.href) "=="  "https://ca.eccotemp.com/privacy-policy/"}}
 <meta name="robots" content="noindex"> 
 {{else if (decodeURI settings.facebook_like_button.href) "=="  "https://ca.eccotemp.com/shipping-returns/"}}
+ <meta name="robots" content="noindex"> 
+{{else}}
+<!--ECCOTEMP-->
+{{/if}}
+// NO INdex on Specific Pages - EU
+{{#if (decodeURI settings.facebook_like_button.href) "=="  "https://eu.eccotemp.com/privacy-policy/"}}
+<meta name="robots" content="noindex"> 
+{{else if (decodeURI settings.facebook_like_button.href) "=="  "https://eu.eccotemp.com/shipping-returns/"}}
+<meta name="robots" content="noindex"> 
+{{else if (decodeURI settings.facebook_like_button.href) "=="  "https://eu.eccotemp.com/terms-and-conditions/"}}
+ <meta name="robots" content="noindex"> 
+{{else if (decodeURI settings.facebook_like_button.href) "=="  "https://eu.eccotemp.com/right-of-withdrawal/"}}
  <meta name="robots" content="noindex"> 
 {{else}}
 <!--ECCOTEMP-->
